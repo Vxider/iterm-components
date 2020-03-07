@@ -60,11 +60,13 @@ Display the fan speed. (Requires iStats ruby gem)
 Display battery charge status and the estimate remaining time.
 
 Charging:
+
 ![battery charge](screenshots/battery-charge-no-estimate.png)
 
 ![battery charge](screenshots/battery-charge-charging.png)
 
 Charged:
+
 ![battery charge](screenshots/battery-charge-charged.png)
 
 ### Weather
