@@ -19,6 +19,7 @@ Custom status bar components for use with iTerm2
     - [Battery charge](#battery-charge)
   - [Weather](#weather)
     - [AQI](#aqi)
+- [Configuration](#configuration)
 
 <!-- /code_chunk_output -->
 
@@ -76,3 +77,7 @@ Charged:
 You need an [aqi api token](https://aqicn.org/api/) and modify the `TOKEN` and `CITY` fields in `weather/aqi.py`.
 
 ![aqi](screenshots/aqi.png)
+
+## Configuration
+
+* The `update interval` of each components can be setted by changing `update_cadence`. The unit is second.

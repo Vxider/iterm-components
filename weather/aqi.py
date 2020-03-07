@@ -11,7 +11,7 @@ async def main(connection):
         short_description='AQI',
         detailed_description='Air Quality Index',
         exemplar='😷80',
-        update_cadence=5,
+        update_cadence=900,
         identifier='vxider.iterm-components.aqi',
         knobs=[],
     )
