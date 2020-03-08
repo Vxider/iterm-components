@@ -19,6 +19,7 @@ Custom status bar components for use with iTerm2
     - [Battery charge](#battery-charge)
   - [Weather](#weather)
     - [AQI](#aqi)
+    - [Local Weather](#local-weather)
 - [Configuration](#configuration)
 
 <!-- /code_chunk_output -->
@@ -77,6 +78,18 @@ Charged:
 You need an [aqi api token](https://aqicn.org/api/) and modify the `TOKEN` and `CITY` fields in `weather/aqi.py`.
 
 ![aqi](screenshots/aqi.png)
+
+#### Local Weather
+
+Display local weather by [darksky-weather](https://github.com/genuinetools/weather).
+
+Install using Homebrew
+
+```
+brew install darksky-weather
+```
+
+![weather](screenshots/weather.png)
 
 ## Configuration
 
