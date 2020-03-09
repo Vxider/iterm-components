@@ -27,7 +27,7 @@ Custom status bar components for use with iTerm2
 
 ## Installation
 
-1. Install script to iTerm2 by using `./install.sh`
+1. Install script to iTerm2 by using `./install.sh`. Or copy the scripts you want to `~/Library/Application Support/iTerm2/Scripts/AutoLaunch`
 2. Install [Nerd Font](https://www.nerdfonts.com/)
 3. Select **Scripts > system|weather** in the iTerm2 menu bar and select the components you want to be available.
 4. Drag the components where you like.
@@ -93,4 +93,4 @@ brew install darksky-weather
 
 ## Configuration
 
-* The `update interval` of each components can be setted by changing `update_cadence`. The unit is second.
+* The `update interval` of each component can be set by changing `update_cadence`. The unit is second.
