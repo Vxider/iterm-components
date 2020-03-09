@@ -6,9 +6,9 @@ import urllib.request
 
 def get_weather_icon(weather):
     if re.match(r'clear*', weather):
-        return '☀'
+        return '☀️'
     elif re.match(r'cloud*', weather):
-        return '☁'
+        return '☁️'
     elif re.match(r'fog|haze*|mist*', weather):
         return '🌫'
     elif re.match(r'partly-cloudy*', weather):
