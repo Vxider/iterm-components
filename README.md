@@ -33,6 +33,8 @@ Custom status bar components for use with iTerm2
 4. Open the `Configure Status Bar` in `iTerm Preferences...->Profile->Session`. Then click `Advanced...` and change the font to which installed in the Step.2.
 5. Drag the components where you like.
 
+You may need to restart the iTerm after installing the new components to make the scripts reload.
+
 ![components](screenshots/components-1.png)
 
 ![components](screenshots/components-2.png)
@@ -61,6 +63,12 @@ Display the fan speed. (Requires iStats ruby gem)
 
 ![fan speed](screenshots/fan-speed.png)
 
+#### Memory usage
+
+Display the memory usage.
+
+![fan speed](screenshots/mem-usage.png)
+
 #### Battery charge
 
 Display battery charge status and the estimate remaining time.
@@ -83,7 +91,7 @@ You need an [aqi api token](https://aqicn.org/api/) and modify the `TOKEN` and `
 
 ![aqi](screenshots/aqi.png)
 
-#### Local Weather
+#### Local weather
 
 Display local weather by [darksky-weather](https://github.com/genuinetools/weather).
 
