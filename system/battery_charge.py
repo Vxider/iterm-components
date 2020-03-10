@@ -26,7 +26,7 @@ async def main(connection):
         percentage = None
         if ("charged" in status):
             icon='\uf578'
-            return f'{icon}' if not stderr else '\uF582 ❌'
+            return f'{icon}' if not stderr else '\uF582 N/A'
         else:
             percentage = re.search('[0-9]*%', status).group(0)[:-1]
             if ("no estimate" in status):
@@ -40,7 +40,7 @@ async def main(connection):
             else:
                 charge_icons="\uF585 \uf585 \uf585 \uf586 \uf587 \uf587 \uf588 \uf588 \uf589 \uf58a \uf584 "
             icon=charge_icons.split()[ord(percentage[0]) - 48]
-            return f'{icon} {percentage}% {estimate}' if not stderr else '\uF582 ❌'
+            return f'{icon} {percentage}% {estimate}' if not stderr else '\uF582 N/A'
 
     await component.async_register(connection, battery_charge_coroutine)
 

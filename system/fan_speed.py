@@ -19,7 +19,7 @@ async def main(connection):
             stderr=asyncio.subprocess.PIPE,
         )
         stdout, stderr = await proc.communicate()
-        return f'\uf70f {stdout.decode().strip()}RPM' if not stderr else '\uf70f ❌RPM'
+        return f'\uf70f {stdout.decode().strip()}RPM' if not stderr else '\uf70f N/A'
 
     await component.async_register(connection, fan_speed_coroutine)
 

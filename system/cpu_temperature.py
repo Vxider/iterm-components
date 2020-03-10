@@ -19,7 +19,7 @@ async def main(connection):
             stderr=asyncio.subprocess.PIPE,
         )
         stdout, stderr = await proc.communicate()
-        return f'\uf8c7 {stdout.decode().strip()}°C' if not stderr else '\uf8c7 ❌'
+        return f'\uf8c7 {stdout.decode().strip()}°C' if not stderr else '\uf8c7 N/A'
 
     await component.async_register(connection, cpu_temp_coroutine)
 
