@@ -29,9 +29,13 @@ Custom status bar components for use with iTerm2
 
 1. Install script to iTerm2 by using `./install.sh`. Or copy the scripts you want to `~/Library/Application Support/iTerm2/Scripts/AutoLaunch`
 2. Install [Nerd Font](https://www.nerdfonts.com/)
-3. Select **Scripts > system|weather** in the iTerm2 menu bar and select the components you want to be available.
-4. Drag the components where you like.
-![components](screenshots/components.png)
+3. Click **Scripts > AutoLaunch** in the iTerm2 menu bar and select the components you want to be available.
+4. Open the `Configure Status Bar` in `iTerm Preferences...->Profile->Session`. Then click `Advanced...` and change the font to which installed in the Step.2.
+5. Drag the components where you like.
+
+![components](screenshots/components-1.png)
+
+![components](screenshots/components-2.png)
 
 ## Components
 
