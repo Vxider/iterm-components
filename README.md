@@ -10,6 +10,7 @@ Custom status bar components for use with iTerm2
 
 <!-- code_chunk_output -->
 
+- [Prerequisites](#prerequisites)
 - [Installation](#installation)
 - [Components](#components)
   - [System](#system)
@@ -26,19 +27,25 @@ Custom status bar components for use with iTerm2
 <!-- /code_chunk_output -->
 
 
-## Installation
+## Prerequisites
 
-1. Install script to iTerm2 by using `./install.sh`. Or copy the scripts you want to `~/Library/Application Support/iTerm2/Scripts/AutoLaunch`
-2. Install [Nerd Font](https://www.nerdfonts.com/)
-3. Click **Scripts > AutoLaunch** in the iTerm2 menu bar and select the components you want to be available.
-4. Open the `Configure Status Bar` in `iTerm Preferences...->Profile->Session`. Then click `Advanced...` and change the font to which installed in the Step.2.
-5. Drag the components where you like.
+The components use glyphs from a patched NERDfont. So you need to install a NERDfont and set it as the default font for status bar components.
 
-You may need to restart the iTerm after installing the new components to make the scripts reload.
+I use the Source Code Pro patched NERDfont, this and other NERDfonts can be found in [Nerd Font](https://www.nerdfonts.com/). The status bar font of iTerm2 can be setted in `iTerm Preferences->Profile->Session->Configure Status Bar->Advanced`.
 
 ![components](screenshots/components-1.png)
 
 ![components](screenshots/components-2.png)
+
+## Installation
+
+1. `git clone https://github.com/Vxider/iterm-components.git && cd iterm-components`
+1. Install script to iTerm2 by using `./install.sh`. Or copy the scripts you want to `~/Library/Application Support/iTerm2/Scripts/AutoLaunch`
+1. Click **Scripts > AutoLaunch** in the iTerm2 menu bar and select the components you want to be available.
+1. Open `iTerm Preferences->Profile->Session->Configure Status Bar` and drag the components where you like.
+
+You may need to restart the iTerm after installing the new components to make the scripts loaded.
+
 
 ## Components
 
