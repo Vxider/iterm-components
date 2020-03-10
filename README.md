@@ -16,10 +16,11 @@ Custom status bar components for use with iTerm2
     - [Power wattage](#power-wattage)
     - [CPU temperature](#cpu-temperature)
     - [Fan speed](#fan-speed)
+    - [Memory usage](#memory-usage)
     - [Battery charge](#battery-charge)
   - [Weather](#weather)
     - [AQI](#aqi)
-    - [Local Weather](#local-weather)
+    - [Local weather](#local-weather)
 - [Configuration](#configuration)
 
 <!-- /code_chunk_output -->
