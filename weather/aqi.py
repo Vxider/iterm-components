@@ -26,9 +26,7 @@ async def main(connection):
             )['data']['aqi']
             return f'😷{aqi}'
         except:
-            raise
-        else:
-            return f'😷N/A'
+            return '😷N/A'
 
     await component.async_register(connection, aqi_coroutine)
 
