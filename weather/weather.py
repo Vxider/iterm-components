@@ -55,7 +55,7 @@ async def main(connection):
             weather=data['currently']['temperature']
             icon_text=data['currently']['icon']
             unit=data['flags']['units']
-            return f'{get_weather_icon(icon_text)} {int(weather)}{get_temperature(unit)}' if not stderr else '☁️ N/A'
+            return f'{get_weather_icon(icon_text)}{int(weather)}{get_temperature(unit)}' if not stderr else '☁️ N/A'
         except:
             return '☁️ N/A'
 
