@@ -19,7 +19,8 @@ async def main(connection):
             stderr=asyncio.subprocess.PIPE,
         )
         stdout, stderr = await proc.communicate()
-        return f'\uf85a {stdout.decode().strip()}%' if not stderr else '\uf85a N/A'
+        percentage = stdout.decode().strip().split('.')[0];
+        return f'\uf85a {percentage}%' if not stderr else '\uf85a N/A'
 
     await component.async_register(connection, mem_usage_coroutine)
 
