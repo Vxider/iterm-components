@@ -1,3 +1,4 @@
+from subprocess import STDOUT, check_output
 import asyncio
 import iterm2
 import json
@@ -44,21 +45,17 @@ async def main(connection):
 
     @iterm2.StatusBarRPC
     async def aqi_coroutine(knobs):
-        proc = await asyncio.create_subprocess_shell(
-            "weather -json",
-            stdout=asyncio.subprocess.PIPE,
-            stderr=asyncio.subprocess.PIPE,
-        )
         try:
-            stdout, stderr = await proc.communicate()
-            data = json.loads(stdout.decode().strip())
+            output = check_output(["/usr/local/bin/weather", "-json"], stderr=STDOUT, timeout=10)
+            data = json.loads(output.decode().strip())
             weather=data['currently']['temperature']
             icon_text=data['currently']['icon']
             unit=data['flags']['units']
-            return f'{get_weather_icon(icon_text)}{int(weather)}{get_temperature(unit)}' if not stderr else '☁️ N/A'
-        except:
+            return f'{get_weather_icon(icon_text)}{int(weather)}{get_temperature(unit)}'
+        except Exception as e:
+            print(e)
             return '☁️ N/A'
 
-    await component.async_register(connection, aqi_coroutine)
+    await component.async_register(connection, aqi_coroutine, timeout=15)
 
 iterm2.run_forever(main)

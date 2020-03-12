@@ -22,12 +22,12 @@ async def main(connection):
         try:
             request = urllib.request.Request( url, {})
             aqi = json.loads(
-                urllib.request.urlopen(request).read().decode()
+                urllib.request.urlopen(request, timeout=10).read().decode()
             )['data']['aqi']
             return f'😷{aqi}'
         except:
             return '😷N/A'
 
-    await component.async_register(connection, aqi_coroutine)
+    await component.async_register(connection, aqi_coroutine, timeout=15)
 
 iterm2.run_forever(main)
