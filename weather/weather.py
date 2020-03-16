@@ -44,7 +44,7 @@ async def main(connection):
     )
 
     @iterm2.StatusBarRPC
-    async def aqi_coroutine(knobs):
+    async def weather_coroutine(knobs):
         try:
             output = check_output(["/usr/local/bin/weather", "-json"], stderr=STDOUT, timeout=10)
             data = json.loads(output.decode().strip())
@@ -56,6 +56,6 @@ async def main(connection):
             print(e)
             return '☁️ N/A'
 
-    await component.async_register(connection, aqi_coroutine, timeout=15)
+    await component.async_register(connection, weather_coroutine, timeout=15)
 
 iterm2.run_forever(main)
