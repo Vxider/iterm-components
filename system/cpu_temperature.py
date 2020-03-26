@@ -14,7 +14,8 @@ async def main(connection):
     @iterm2.StatusBarRPC
     async def cpu_temp_coroutine(knobs):
         proc = await asyncio.create_subprocess_shell(
-            '~/.rbenv/shims/istats cpu temp --value-only | cut -d \'.\' -f1',
+            # '~/.rbenv/shims/istats scan "TCXC PECI CPU" --value-only | cut -d \'.\' -f1', #use this line if you want to get CPU PECI temperature (Same temperature as in Intel Power Gadget.)
+            '~/.rbenv/shims/istats cpu temp --value-only | cut -d \'.\' -f1', # use CPU proximity temperature
             stdout=asyncio.subprocess.PIPE,
             stderr=asyncio.subprocess.PIPE,
         )
