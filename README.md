@@ -40,6 +40,7 @@ I use the Source Code Pro patched NERDfont, this and other NERDfonts can be foun
 ## Installation
 
 1. `git clone https://github.com/Vxider/iterm-components.git && cd iterm-components`
+1. Install [iStats](https://github.com/Chris911/iStats) by `gem install iStats`. (Used by `CPU temperature` and `Fan speed`)
 1. Install script to iTerm2 by using `./install.sh`. Or copy the scripts you want to `~/Library/Application Support/iTerm2/Scripts/AutoLaunch`
 1. Click **Scripts > AutoLaunch** in the iTerm2 menu bar and select the components you want to be available.
 1. Open `iTerm Preferences->Profile->Session->Configure Status Bar` and drag the components where you like.
@@ -59,15 +60,17 @@ Display the AC power adapter wattage currently connected.
 
 #### CPU temperature
 
-Display the CPU temperature. (Requires iStats ruby gem)
+Display the CPU temperature.
+
+Requires iStats ruby gem, if Ruby is not installed by rbenv, you may need to modify the istats path in the script.
 
 ![CPU temperature](screenshots/cpu-temperature.png)
-
-Install [iStats](https://github.com/Chris911/iStats) by `gem install iStats`
 
 #### Fan speed
 
 Display the fan speed. (Requires iStats ruby gem)
+
+Requires iStats ruby gem, if Ruby is not installed by rbenv, you may need to modify the istats path in the script.
 
 ![fan speed](screenshots/fan-speed.png)
 
