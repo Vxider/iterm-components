@@ -14,7 +14,7 @@ async def main(connection):
     @iterm2.StatusBarRPC
     async def cpu_temp_coroutine(knobs):
         proc = await asyncio.create_subprocess_shell(
-            '/Users/vxider/.rbenv/shims/istats scan "TCXC PECI CPU" --value-only | cut -d \'.\' -f1',
+            '~/.rbenv/shims/istats cpu temp --value-only | cut -d \'.\' -f1',
             stdout=asyncio.subprocess.PIPE,
             stderr=asyncio.subprocess.PIPE,
         )

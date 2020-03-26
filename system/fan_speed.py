@@ -14,7 +14,7 @@ async def main(connection):
     @iterm2.StatusBarRPC
     async def fan_speed_coroutine(knobs):
         proc = await asyncio.create_subprocess_shell(
-            "/Users/vxider/.rbenv/shims/istats fan speed --value-only | tr '\n' '/' | sed 's/.$//;s/ //g'",
+            "~/.rbenv/shims/istats fan speed --value-only | tr '\n' '/' | sed 's/.$//;s/ //g'",
             stdout=asyncio.subprocess.PIPE,
             stderr=asyncio.subprocess.PIPE,
         )
