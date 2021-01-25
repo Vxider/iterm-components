@@ -20,7 +20,9 @@ async def main(connection):
             stderr=asyncio.subprocess.PIPE,
         )
         stdout, stderr = await proc.communicate()
-        return f'\uFBA3 {stdout.decode().strip()}W' if not stderr else '\uFBA4'
+        if not stdout or stderr:
+            return '\uFBA4'
+        return f'\uFBA3 {stdout.decode().strip()}W'
 
     await component.async_register(connection, power_wattage_coroutine)
 
