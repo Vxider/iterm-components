@@ -39,7 +39,10 @@ async def main(connection):
                 charge_icons="\uF586 \uf579 \uf57a \uf57b \uf57c \uf57d \uf57e \uf57f \uf580 \uf581 \uf578 "
             else:
                 charge_icons="\uF585 \uf585 \uf585 \uf586 \uf587 \uf587 \uf588 \uf588 \uf589 \uf58a \uf584 "
-            icon=charge_icons.split()[ord(percentage[0]) - 48]
+            if percentage == "100":
+                icon = "\uf578"
+            else:
+                icon=charge_icons.split()[ord(percentage[0]) - 48]
             return f'{icon} {percentage}% {estimate}' if not stderr else '\uF582 N/A'
 
     await component.async_register(connection, battery_charge_coroutine)
